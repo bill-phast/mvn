@@ -7,9 +7,19 @@
     <parent>
         <artifactId>ctdynamo-parent</artifactId>
         <groupId>ai.phast</groupId>
-        <version>0.0.4</version>
+        <version>0.0.5</version>
     </parent>
     <artifactId>ctdynamo-processor</artifactId>
+    <packaging>jar</packaging>
+
+    <name>Annotation processing for ctdynamo</name>
+    <description>
+        This is the annotation processing portion of ctdynamo, the compile time dynamo layer. It replaces the AWS SDK v2
+        enhanced dynamo package with something that is easier to use and higher performance. See ctdynamo-runtime for the
+        matching compile time dependency.
+
+        Import this via maven as a compile-time dependency to use it.
+    </description>
 
     <licenses>
         <license>
@@ -43,7 +53,7 @@
         <dependency>
             <groupId>ai.phast</groupId>
             <artifactId>ctdynamo-runtime</artifactId>
-            <version>1.0</version>
+            <version>${project.parent.version}</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
